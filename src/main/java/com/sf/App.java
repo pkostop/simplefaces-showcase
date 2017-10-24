@@ -31,7 +31,8 @@ public class App
         // PlusConfiguration) to choosing where the webapp will unpack itself.
         WebAppContext webapp = new WebAppContext();
         webapp.setContextPath( "/" );
-        System.out.println(App.class.getResource("."));
+        System.out.println((new File(".")).getAbsolutePath());
+        System.out.println((new File(".")).list());
         File warFile=new File("simplefaces-showcase-war.war");        
         if (!warFile.exists())
         {
