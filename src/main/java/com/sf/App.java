@@ -32,7 +32,9 @@ public class App
         WebAppContext webapp = new WebAppContext();
         webapp.setContextPath( "/" );
         System.out.println((new File(".")).getAbsolutePath());
-        System.out.println((new File(".")).list());
+        for(String _file:(new File(".")).list()){
+        	System.out.println(_file);
+        }        
         File warFile=new File("simplefaces-showcase-war.war");        
         if (!warFile.exists())
         {
