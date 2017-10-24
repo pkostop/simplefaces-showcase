@@ -33,7 +33,7 @@ public class App
         webapp.setContextPath( "/" );                   
         File warFile=findWar(new File("."));        
         if (!warFile.exists())
-        {
+        { 
             throw new RuntimeException( "Unable to find WAR File: "
                     + warFile.getAbsolutePath() );
         }
