@@ -32,7 +32,7 @@ public class App
         WebAppContext webapp = new WebAppContext();
         webapp.setContextPath( "/" );
         System.out.println(App.class.getResource("."));
-        File warFile=new File(App.class.getResource("../../simplefaces-showcase-war.war").getFile());        
+        File warFile=new File(App.class.getResource("simplefaces-showcase-war.war").getFile());        
         if (!warFile.exists())
         {
             throw new RuntimeException( "Unable to find WAR File: "
