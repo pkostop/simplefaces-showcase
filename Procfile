@@ -1,1 +1,1 @@
-web: java  -cp target/classes:target/dependency/* com.sf.App
+web: java  -jar target/simplefaces-showcase-1.0-SNAPSHOT.jar
