@@ -1,1 +1,1 @@
-web: java -jar sf.jar
+web: java -jar simplefaces-showcase-1.0-SNAPSHOT.jar
