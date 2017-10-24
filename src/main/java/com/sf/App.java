@@ -30,11 +30,7 @@ public class App
         // the webapp (through
         // PlusConfiguration) to choosing where the webapp will unpack itself.
         WebAppContext webapp = new WebAppContext();
-        webapp.setContextPath( "/" );
-        System.out.println((new File(".")).getAbsolutePath());
-        for(String _file:(new File(".")).list()){
-        	System.out.println(_file);
-        }        
+        webapp.setContextPath( "/" );                   
         File warFile=findWar(new File("."));        
         if (!warFile.exists())
         {
