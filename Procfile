@@ -1,1 +1,1 @@
-"web: java -cp target/classes:target/dependency/* com.sf.App" 
+web: java -cp target/classes:target/dependency/* com.sf.App
