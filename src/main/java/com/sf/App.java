@@ -35,7 +35,7 @@ public class App
         for(String _file:(new File(".")).list()){
         	System.out.println(_file);
         }        
-        File warFile=new File("simplefaces-showcase-war.war");        
+        File warFile=findWar(new File("."));        
         if (!warFile.exists())
         {
             throw new RuntimeException( "Unable to find WAR File: "
@@ -77,5 +77,22 @@ public class App
         // wait until the server is done executing.
         // See http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#join()
         server.join();
+    }
+    
+    
+    protected static File findWar(File currentDir){
+    	if(currentDir!=null&&currentDir.list()!=null){
+    		for(String _file:currentDir.list()){
+    			File currentFile=new File(currentDir.getAbsolutePath()+File.separator+_file);
+    			if("simplefaces-showcase-war.war".equalsIgnoreCase(currentFile.getName()))
+    					return new File(currentDir.getAbsolutePath()+File.separator+_file);
+    			else if(currentFile.isDirectory()){
+    				 File f=findWar(currentFile);
+    				 if(f!=null)
+    					 return f;
+    			}
+    		}
+    	}
+    	return null;
     }
 }
